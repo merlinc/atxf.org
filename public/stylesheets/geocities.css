@@ -1,0 +1,136 @@
+body {
+  background-color: #000000;
+  color: #cccccc;
+  
+/*  leftmargin: 0;
+  topmargin: 0;
+  marginheight: 0;
+  marginwidth: 0;*/
+}
+
+a:link { 
+  font-family: "Andale Mono", AndaleMono, "Monotype.com", "Lucida Console", "Courier New", monospace;
+  color: #00cc00;
+}
+
+a:visited {
+  color: #009900;
+
+}
+
+a:hover {
+  color: #6666cc;
+}
+
+a:active {
+  color: #6666cc;
+}
+
+ul#navigation {
+  display: inline;
+  list-style-type: none;
+  width: 600px;
+  margin: 0px auto;
+}
+
+ul#main {
+  display: inline;
+  list-style-type: none;
+  width: 542px;
+  margin: auto;
+}
+
+ul#main > li a:before {
+  content: url(/archive/images_nav/button-big.gif);
+}
+
+ul#main > li:nth-child(2n+1) a {
+  font-size: 25px;
+  float: left;
+  width:50%;
+}
+
+ul#main > li:nth-child(2n+2) a {
+  font-size: 25px;
+  float: right;
+  width: 50%;
+}
+
+ul#tags {
+    list-style-type: none;
+}
+
+ul#tags > li {
+  display: inline;
+  padding-right: 10px;
+}
+
+ul#tags > li a:before {
+  content: url(/archive/images_nav/button-small.gif);
+  margin-top: 5px;
+}
+
+ul#chapters > li a:before {
+  content: url(/archive/images_nav/button-big.gif);
+}
+
+ul#chapters {
+  display: inline;
+  list-style-type: none;
+  width: 542px;
+  margin: auto;
+}
+
+ul#chapters > li:nth-child(2n+1) a {
+  font-size: 25px;
+  float: left;
+  width:33%;
+}
+
+ul#chapters > li:nth-child(2n+2) a {
+  font-size: 25px;
+  float: left;
+  width: 33%;
+}
+
+ul#chapters > li:nth-child(2n+3) a {
+  font-size: 25px;
+  float: left;
+  width: 33%;
+}
+
+ul#chapters > li:last-child a {
+  font-size: 25px;
+  margin: auto;
+  width: 33%;
+}
+
+ul#site {
+  display: inline;
+  list-style-type: none;
+}
+
+ul#site > li a:before {
+  content: url(/archive/images_nav/button-small.gif);
+}
+
+ul#site > li:nth-child(2n+1) a {
+  font-size: 12px;
+  text-transform: lowercase;
+  float: left;
+  width:33%;
+}
+
+ul#site > li:nth-child(2n+2) a {
+  font-size: 12px;
+  text-transform: lowercase;
+  float: left;
+  width: 33%;
+}
+
+ul#site > li:nth-child(2n+3) a {
+  font-size: 12px;
+  text-transform: lowercase;
+  float: left;
+  width: 33%;
+}

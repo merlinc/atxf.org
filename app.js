@@ -25,6 +25,7 @@ app.configure(function(){
 
 app.configure('development', function(){
   app.use(express.errorHandler());
+  app.set('view options', { debug: true })
 });
 
 app.get('/', routes.index);

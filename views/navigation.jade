@@ -1,0 +1,29 @@
+- var mainNav = [{route:'daiquiri.html', title:'Have a fresh Daiquiri with a lemon twist', text: 'Daiquiri'}, {route:'culled.html', title:'Separating the chaff from the chaff', text: 'Culled Stuff'}, {route:'gatherings.html', title:'Not a place to lose your head', text: 'Gatherings'}, {route:'x-reports.html', title:'We put the X in FBI', text: 'X-Reports'}, {route:'interviews.html', title:'More like interrogations really!', text: 'Interviews'}, {route:'web.html', title:'A list of the pages of regulars', text: 'Web List'}, {route:'who.html', title:'The Who is Who, of ATXF', text: 'Who\'s Who'}, {route:'faqs.html', title:'FAQer', text: 'FAQ'}]
+- var tagNav = [{route:"rel.html", title:"REL:evancy is rewarded", text:"REL"}, {route:"tan.html", title:"TAN:gential discussions are frequent", text:"TAN"}, {route:"merch.html", title:"MERCH:andising is a lust object", text:"MERCH"}, {route:"admin.html", title:"ADMIN:istration is power", text:"ADMIN"}, {route:"quotewar.html", title:"QUOTEWAR: \' \'", text:"QUOTEWAR"}]
+- var chapterNav = [{route:"brisxf.html", title:"BrisXF: The Brisbane Chapter", text:"BrisXF"}, {route:"melbxf.html", title:"MelbXF: The Melbourne Chapter", text:"MelbXF"}, {route:"sydxf.html", title:"SydXF: The Sydney (and Canberra) Chapter", text:"SydXF"}, {route:"otherxf.html", title:"OtherXF: The Lost Chapters", text:"Other XF"}]
+- var siteNav = [{route:"mailto:atxf@geocities.com", title:"Email the Webmaster", text:"Email Me"} ,   {route:"new.html", title:"What's new under the sun?", text:"What's New?"}]
+
+
+    ul#navigation
+      mixin navLink(route, title, text)
+        li
+          a(href='#{route}', title='#{title}') #{text}
+      li
+        a(href="main.html", title="Go Home")
+          img(name="xlogo", src="/archive/images_nav/text-xlogo.gif", width="73", height="71", border="0", title="The X to take you home")
+      li
+        ul#main
+          each nav in mainNav
+            +navLink(nav.route, nav.title, nav.text)
+      li
+        ul#tags
+          each nav in tagNav
+              +navLink(nav.route, nav.title, nav.text)
+      li    
+        ul#chapters  
+          each nav in chapterNav
+              +navLink(nav.route, nav.title, nav.text)    
+      li
+        ul#site
+          each nav in siteNav
+            +navLink(nav.route, nav.title, nav.text)
