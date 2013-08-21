@@ -29,7 +29,24 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/', routes.index);
+app.get('/daiquiri', routes.daiquiri);
+app.get('/gatherings', routes.gatherings);
+app.get('/interviews', routes.interviews);
+app.get('/who', routes.who);
+app.get('/web', routes.web);
+app.get('/faqs', routes.faq);
+
+app.get('/rel', routes.noContent);
+app.get('/tan', routes.noContent);
+app.get('/merch', routes.noContent);
+app.get('/admin', routes.noContent);
+app.get('/quotewar', routes.noContent);
+
+app.get('/brisxf', routes.noContent);
+app.get('/melbxf', routes.noContent);
+app.get('/sydxd', routes.noContent);
+app.get('/otherxf', routes.noContent);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
