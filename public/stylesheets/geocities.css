@@ -1,6 +1,7 @@
 body {
   background-color: #000000;
   color: #cccccc;
+  margin: 0 auto;
   
 /*  leftmargin: 0;
   topmargin: 0;
@@ -27,58 +28,89 @@ a:active {
 }
 
 ul#navigation {
-  display: inline;
   list-style-type: none;
-  width: 600px;
-  margin: 0px auto;
+  width: 542px;
+  margin: 0 auto;
+  border: 1px solid green;
+  padding: 0;
+}
+
+ul#navigation > li {
+  display: block;
+}
+
+ul#navigation a {
+  text-decoration: none;
+}
+
+li#home {
+  margin: 0 auto;
+  width: 542px;
+}
+
+li#home a img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 ul#main {
-  display: inline;
+  display: inline-block;
   list-style-type: none;
-  width: 542px;
-  margin: auto;
+  width: 502px;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 
 ul#main > li a:before {
-  content: url(/archive/images_nav/button-big.gif);
+  content: ' ';
+  line-height: 0;
+  border:5px outset #089408;
+  padding-left: 7px;
+  padding-right: 7px; 
+  background-color:#00ad00; 
 }
 
+ul#main > li {
+    font-size: 22px;
+}
 ul#main > li:nth-child(2n+1) a {
-  font-size: 25px;
   float: left;
   width:50%;
 }
 
 ul#main > li:nth-child(2n+2) a {
-  font-size: 25px;
-  float: right;
+  float: left;
   width: 50%;
 }
 
 ul#tags {
-    list-style-type: none;
+  width: 542px;
+  list-style-type: none;
+  margin: 0px auto;
+  border: 1px solid yellow;
+  padding-left: 0px;
 }
 
 ul#tags > li {
+  font-size: 14px;
   display: inline;
+  border: 1px solid purple;
+  padding-left: 10px;
   padding-right: 10px;
 }
 
 ul#tags > li a:before {
   content: url(/archive/images_nav/button-small.gif);
-  margin-top: 5px;
-}
-
-ul#chapters > li a:before {
-  content: url(/archive/images_nav/button-big.gif);
+  padding-top: 5px;
 }
 
 ul#chapters {
   display: inline;
   list-style-type: none;
   width: 542px;
-  margin: auto;
+  margin: 0px auto;
+  border: 1px solid blue;
 }
 
 ul#chapters > li:nth-child(2n+1) a {
@@ -103,6 +135,10 @@ ul#chapters > li:last-child a {
   font-size: 25px;
   margin: auto;
   width: 33%;
+}
+
+ul#chapters > li a:before {
+  content: url(/archive/images_nav/button-big.gif);
 }
 
 ul#site {
@@ -133,4 +169,16 @@ ul#site > li:nth-child(2n+3) a {
   text-transform: lowercase;
   float: left;
   width: 33%;
+}
+
+.box {
+  border:10px outset #089408; background-color:#00ad00; padding:10px;
+}
+
+
+.radialbg {
+    background: transparent -webkit-gradient(radial, center center, 50, center center, 460, from(transparent), to(#000));
+    background: -moz-radial-gradient(circle, transparent, #000);
+    width: 100%;
+    height: 100%;
 }
