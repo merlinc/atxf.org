@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fefef9;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Exo', sans-serif;
+}
+
+ul#navigation {
+  padding: 0;
+  height: 80px;
+}
+ul#navigation li {
+  display: inline;
+}
+
+li#home {
+  width: 73px;
+  height: 71px;
+  background: url(/archive/images_nav/text-xlogo.gif);
+}
+
+.xLogo {
+  width: 73px;
+  height: 71px;
+  line-height: 1;
+}
+
+ul#main:before {
+  content: "Main: ";
+}
+
+ul#tags:before {
+  content: "Tags: ";
+}
+
+ul#chapters:before {
+  content: "Chapters: ";
+}
+
+ul#site:before {
+  content: "Site: ";
+}
+
+ul#main li {
+  padding-left: 10px; 
+  padding-right: 10px;
+  border: 1px solid red;
+}
+
+ul#tags li {
+  padding-left: 10px; 
+  padding-right: 10px;
+  border: 1px solid green;
+}
+
+ul#chapters li {
+  padding-left: 10px; 
+  padding-right: 10px;
+  border: 1px solid blue;
+}
+
+ul#site li {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid purple;
+}
+
+article {
+  width: 500px;
+  border: 1px solid gray;
+}
+
+dt {
+  font-weight: bold;
+}
+
+.linkDown:after {
+  content: " (down in 1999)";
+  color: #838383;
+}

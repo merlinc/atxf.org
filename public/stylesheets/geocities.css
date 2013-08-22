@@ -16,7 +16,6 @@ a:link {
 
 a:visited {
   color: #009900;
-
 }
 
 a:hover {
@@ -25,6 +24,10 @@ a:hover {
 
 a:active {
   color: #6666cc;
+}
+
+a:down {
+  color: #85006e;
 }
 
 ul#navigation {
@@ -65,15 +68,21 @@ ul#main {
 ul#main > li a:before {
   content: ' ';
   line-height: 0;
-  border:5px outset #089408;
+  font-size: 13px;
+  border:4px outset #089408;
+  border-radius: 2px;
   padding-left: 7px;
-  padding-right: 7px; 
-  background-color:#00ad00; 
+  padding-right: 7px;
+  background-color:#00ad00;
+  box-shadow: #ff0000; 
+  position: relative;
+  top: -3px;
 }
 
 ul#main > li {
     font-size: 22px;
 }
+
 ul#main > li:nth-child(2n+1) a {
   float: left;
   width:50%;
@@ -85,31 +94,43 @@ ul#main > li:nth-child(2n+2) a {
 }
 
 ul#tags {
-  width: 542px;
   list-style-type: none;
-  margin: 0px auto;
   border: 1px solid yellow;
-  padding-left: 0px;
+  text-align: center;
 }
 
 ul#tags > li {
   font-size: 14px;
-  display: inline;
+  display: inline-block;
   border: 1px solid purple;
-  padding-left: 10px;
   padding-right: 10px;
+  padding-left: 10px;
 }
-
+/*
 ul#tags > li a:before {
   content: url(/archive/images_nav/button-small.gif);
   padding-top: 5px;
 }
+*/
+
+ul#tags > li a:before {
+  content: '.';
+  line-height: 0;
+  font-size: 8px;
+  border:4px outset #089408;
+  border-radius: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color:#00ad00;
+  box-shadow: #ff0000; 
+  position: relative;
+  top: -3px;
+}
 
 ul#chapters {
-  display: inline;
+  text-align: center;
   list-style-type: none;
   width: 542px;
-  margin: 0px auto;
   border: 1px solid blue;
 }
 
@@ -138,13 +159,26 @@ ul#chapters > li:last-child a {
 }
 
 ul#chapters > li a:before {
-  content: url(/archive/images_nav/button-big.gif);
+  content: ' ';
+  line-height: 0;
+  font-size: 13px;
+  border:4px outset #089408;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color:#00ad00;
+  box-shadow: #ff0000; 
+  position: relative;
+  top: -3px;
 }
+
 
 ul#site {
   display: inline;
   list-style-type: none;
 }
+
+
 
 ul#site > li a:before {
   content: url(/archive/images_nav/button-small.gif);
@@ -181,4 +215,22 @@ ul#site > li:nth-child(2n+3) a {
     background: -moz-radial-gradient(circle, transparent, #000);
     width: 100%;
     height: 100%;
+}
+
+.linkDown:after {
+  content: "-X-";
+  color: #FF33CC;
+  font-weight: bold;
+}
+
+li#home {
+  width: 73px;
+  height: 71px;
+  background: url(/archive/images_nav/text-xlogo.gif);
+}
+
+.xLogo {
+  width: 73px;
+  height: 71px;
+  line-height: 1;
 }

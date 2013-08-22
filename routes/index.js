@@ -4,7 +4,21 @@
  */
 
 exports.index = function(req, res){
+  console.log("Cookies:", req.cookies, res.cookies);
+
+  if(req.cookies.theme === undefined) {
+    res.cookie('theme', 'geocities');
+  } else if( req.cookies.theme == 'geocities') {
+    res.cookie('theme', 'modern');
+  } else {
+    res.cookie('theme', 'geocities');
+  }
+
+  if(!res.locals) { res.locals = {}};
+  res.locals.theme = req.cookies.theme;
+
   res.render('index', { title: 'atxf.org' });
+
 };
 
 exports.daiquiri = function(req, res) {
