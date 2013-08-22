@@ -37,6 +37,14 @@ app.get('/interviews', routes.interviews);
 app.get('/who', routes.who);
 app.get('/web', routes.web);
 app.get('/faqs', routes.faq);
+app.get('/faq__anti_faq', routes.faq__anti_faq);
+app.get('/faq__atxf_faq', routes.faq__atxf_faq);
+app.get('/faq__hardy_perennials', routes.faq__hardy_perennials);
+app.get('/faq__irc', routes.faq__irc);
+app.get('/faq__spoiler_faq_us_edition', routes.faq__spoiler_faq_us_edition);
+app.get('/faq__spoiler_policy', routes.faq__spoiler_policy);
+app.get('/faq__write_an_x-report', routes.faq__write_an_x_report);
+app.get('/faq__xreport_faq', routes.faq__xreport_faq);
 
 app.get('/rel', routes.noContent);
 app.get('/tan', routes.noContent);

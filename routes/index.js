@@ -45,6 +45,40 @@ exports.faq = function(req, res) {
   res.render('faq', { title: 'atxf.org - faq'});
 };
 
+exports.faq__anti_faq = function(req, res) {
+	res.render('faq__anti_faq', {title: 'ignored'});
+};
+
+exports.faq__atxf_faq = function(req, res) {
+	res.render('faq__atxf_faq', {title: 'ignored'});
+};
+
+exports.faq__hardy_perennials = function(req, res) {
+	res.render('faq__hardy_perennials', {title: 'ignored'});
+};
+
+exports.faq__irc = function(req, res) {
+	res.render('faq__irc', {title: 'ignored'});
+};
+
+exports.faq__spoiler_policy = function(req, res) {
+	res.render('faq__spoiler_policy', {title: 'ignored'});
+};
+
+exports.faq__spoiler_faq_us_edition = function(req, res) {
+	res.render('faq__spoiler_faq_us_edition', {title: 'ignored'});
+};
+
+exports.faq__write_an_x_report = function(req, res) {
+	res.render('faq__write_an_x-report', {title: 'ignored'});
+};
+
+exports.faq__xreport_faq = function(req, res) {
+	res.render('faq__xreport_faq', {title: 'ignored'});
+};
+
+
+
 exports.noContent = function(req, res) {
 	res.render('no_content', { title: 'atxf.org - needs title!'});
 };
