@@ -1,8 +1,30 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#themeSwitcher {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-a {
-  color: #00B7FF;
+#themeSwitcher ul:before {
+  color: #eaeaea;
+  font-family: 'Exo', sans-serif;
+  content: 'themes:';
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+#themeSwitcher ul {
+  display: inline;
+}
+
+#themeSwitcher ul li {
+  display: inline;
+  padding: 5px;
+}
+
+#themeSwitcher ul li a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+  text-transform: lowercase;
+  font-size: 12px;
 }

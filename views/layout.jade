@@ -2,6 +2,7 @@ doctype 5
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
     if('geocities' == theme)
       link(rel='stylesheet', href='/stylesheets/geocities.css')
     else
@@ -9,9 +10,13 @@ html
   body
     include navigation
     block content
-    if('geocities' != theme)
-      script(src='http://code.jquery.com/jquery-2.0.3.js')
-      script
-        $(document).ready(function() {
-          $('#site').appendTo("body")
+    script(src='http://code.jquery.com/jquery-2.0.3.js')
+    script.
+      $(document).ready(function() {
+        jQuery('<div id="themeSwitcher"><ul id="theme"><li><a href="?theme=geocities">Geocities</a></li><li><a href="?theme=modern">Modern</a></li></ul></div>', {
+            }).appendTo('body');
+
+      if('geocities' != theme)
+        $('#site').appendTo("body")
+
         });

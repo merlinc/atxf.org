@@ -234,3 +234,19 @@ li#home {
   height: 71px;
   line-height: 1;
 }
+
+#themeSwitcher ul:before {
+  color: #00cc00;
+  font-family: 'AndaleMono', sans-serif;
+  content: 'themes:';
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+#themeSwitcher ul li a {
+  color: #00cc00;
+  text-decoration: none;
+  font-family: 'AndaleMono', sans-serif;
+  text-transform: lowercase;
+  font-size: 12px;
+}

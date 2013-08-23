@@ -6,7 +6,9 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , url = require('url');
+//  , params = require('./params');
 
 var app = express();
 
@@ -27,8 +29,33 @@ app.configure(function(){
 
 app.configure('development', function(){
   app.use(express.errorHandler());
-  app.set('view options', { debug: true })
+  app.set('view options', { debug: true });
 });
+
+// Applying theme
+app.all('*', function(req, res, next) {
+
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+
+    var newTheme = '';
+    
+    if(query.theme) {
+      newTheme = query.theme;
+    } else if(req.cookies && req.cookies.theme) {
+      newTheme = req.cookies.theme;
+    }
+
+    if('geocities,modern'.indexOf(newTheme) == -1) {
+      newTheme = 'modern';
+    }
+
+    if(!res.locals) { res.locals = {};}
+
+    res.locals.theme = newTheme;
+    res.cookie('theme', newTheme);
+    next();
+  });
 
 app.get('/', routes.index);
 app.get('/daiquiri', routes.daiquiri);
