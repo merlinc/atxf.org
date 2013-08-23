@@ -9,3 +9,9 @@ html
   body
     include navigation
     block content
+    if('geocities' != theme)
+      script(src='http://code.jquery.com/jquery-2.0.3.js')
+      script
+        $(document).ready(function() {
+          $('#site').appendTo("body")
+        });

@@ -3,24 +3,51 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fefef9;
+  padding: 0;
+  margin: 0;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 37%, rgba(246,246,246,1) 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(37%,rgba(246,246,246,1)), color-stop(99%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 37%,rgba(246,246,246,1) 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 37%,rgba(246,246,246,1) 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 37%,rgba(246,246,246,1) 99%); /* IE10+ */
+background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 37%,rgba(246,246,246,1) 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 ); /* IE6-9 */
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Exo', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
 }
 
 ul#navigation {
   padding: 0;
-  height: 80px;
+  margin: 0;
+  height: 20px;
+background-image: linear-gradient(bottom, rgb(19,191,19) 31%, rgb(20,209,20) 74%);
+background-image: -o-linear-gradient(bottom, rgb(19,191,19) 31%, rgb(20,209,20) 74%);
+background-image: -moz-linear-gradient(bottom, rgb(19,191,19) 31%, rgb(20,209,20) 74%);
+background-image: -webkit-linear-gradient(bottom, rgb(19,191,19) 31%, rgb(20,209,20) 74%);
+background-image: -ms-linear-gradient(bottom, rgb(19,191,19) 31%, rgb(20,209,20) 74%);
+border-bottom: 2px solid #139f13;
+padding-bottom: 2px;
 }
-ul#navigation li {
+
+ul#navigation li a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+}
+
+ul#navigation  li {
   display: inline;
 }
 
-li#home {
-  width: 73px;
-  height: 71px;
-  background: url(/archive/images_nav/text-xlogo.gif);
+ul#navigation > li {
+  display: inline-block;
 }
 
 .xLogo {
@@ -29,49 +56,64 @@ li#home {
   line-height: 1;
 }
 
-ul#main:before {
-  content: "Main: ";
+ul#tags {
+  display: none;
 }
 
-ul#tags:before {
-  content: "Tags: ";
+ul#chapters {
+  display: none;
 }
 
-ul#chapters:before {
-  content: "Chapters: ";
-}
-
-ul#site:before {
-  content: "Site: ";
-}
 
 ul#main li {
   padding-left: 10px; 
   padding-right: 10px;
-  border: 1px solid red;
+  border-right: 1px solid #139f13;
+}
+
+ul#main li:last-child {
+  border-right: 0;
 }
 
 ul#tags li {
   padding-left: 10px; 
   padding-right: 10px;
-  border: 1px solid green;
 }
 
 ul#chapters li {
   padding-left: 10px; 
   padding-right: 10px;
-  border: 1px solid blue;
+}
+
+ul#site {
+  padding: 0;
+  margin: 0;
+  height: 18px;
+  background-image: linear-gradient(bottom, rgb(230,230,230) 31%, rgb(240,240,240) 74%);
+  background-image: -o-linear-gradient(bottom, rgb(230,230,230) 31%, rgb(240,240,240) 74%);
+  background-image: -moz-linear-gradient(bottom, rgb(230,230,230) 31%, rgb(240,240,240) 74%);
+  background-image: -webkit-linear-gradient(bottom, rgb(230,230,230) 31%, rgb(240,240,240) 74%);
+  background-image: -ms-linear-gradient(bottom, rgb(230,230,230) 31%, rgb(240,240,240) 74%);
+  border-top: 2px solid rgb(230,230,230);
+  line-height: 1;
 }
 
 ul#site li {
+  display: inline;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid purple;
+  color: #eaeaea;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+  font-size: 12px;
 }
 
 article {
   width: 500px;
-  border: 1px solid gray;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding: 0;
+/*  border: 1px solid gray;*/
 }
 
 dt {
@@ -81,4 +123,9 @@ dt {
 .linkDown:after {
   content: " (down in 1999)";
   color: #838383;
+}
+
+.xLogo:before {
+  content: "atxf.org : 2013 redux";
+  padding-left: 11px;
 }
